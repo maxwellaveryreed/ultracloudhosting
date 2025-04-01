@@ -1,0 +1,270 @@
+/*
+ * jQuery UI Slider 1.8.18
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Slider#theming
+ */
+
+.ui-slider {
+	position: relative;
+	text-align: left;
+}
+.ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 1.2em;
+	height: 1.2em;
+	cursor: default;
+}
+.ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	font-size: .7em;
+	display: block;
+	border: 0;
+	background-position: 0 0;
+}
+.ui-slider-horizontal .ui-slider-handle {
+	top: -.3em;
+	margin-left: -.6em;
+}
+.ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 8px;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+	left: -1px;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+	right: 0;
+}
+.ui-slider-vertical {
+	width: .8em;
+	height: 100px;
+}
+.ui-slider-vertical .ui-slider-handle {
+	left: -.3em;
+	margin-left: 0;
+	margin-bottom: -.6em;
+}
+.ui-slider-vertical .ui-slider-range {
+	left: 0;
+	width: 100%;
+}
+.ui-slider-vertical .ui-slider-range-min {
+	bottom: 0;
+}
+.ui-slider-vertical .ui-slider-range-max {
+	top: 0;
+}
+.slider-container h3 {
+	margin:0 0 10px;
+	padding:0;
+	color:#333;
+	font-size:30px;
+	line-height:30px;
+	font-weight:normal;
+}
+.slider-container p {
+	margin:0;
+	padding:0;
+}
+.sliderbox {
+    float: left;
+    width: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.slider-container #slider {
+    margin: 0 auto 20px;
+    width: 100%;
+    height: 16px;
+    padding: 0;
+    background: #45455c;
+    border-radius: 10px;
+}
+.slider-container #slider .ui-slider-range {
+    background: var(--accent);
+    border-radius: 10px;
+    height: 16px;
+}
+.slider-container #slider .ui-slider-handle {
+	outline: none;
+	background: url(../images/handle.png) no-repeat left top;
+	border-radius: 0;
+	border: 0;
+	width: 58px;
+	height: 58px;
+	margin-top: -14px;
+	margin-left: -26px;
+	transition: none; 
+}
+.slider-container #slider .ui-slider-handle:hover {
+	cursor: pointer;
+}
+.price_rangetxt {
+    width: 100%;
+    display: grid;
+    margin-bottom: 37px;
+    grid-template-columns: 9% 9% 9% 9% 9%;
+    justify-content: center;
+    gap: 97px;
+}
+.price_rangetxt div.icon {
+    color: var(--primary-color);
+    font-size: 20px;
+    line-height: 24px;
+    cursor: pointer;
+    font-weight: 600;
+    position: relative;
+    text-align: center;
+}
+.price_rangetxt .icon.current{
+    color: var(--accent);
+}
+.slider-outer {
+    background: var(--secondary-color);
+    padding: 48px 70px 133px;
+}
+.price_content {
+    width: 100%;
+    float: left;
+    padding: 0 70px 109px;
+}
+.sliderbox > p {
+    margin-bottom: 0;
+    text-align: center;
+    width: 100%;
+    float: left;
+}
+.price_content .smallbox {
+    padding: 46px 40px 32px;
+    background: var(--primary-color);
+    border-radius: 25px;
+    text-align: center;
+    transition: .3s ease-in-out;
+    border: 1px solid transparent;
+}
+.price_content .smallbox:hover{
+    border-color: var(--accent);
+}
+.price_content .smallbox::after{
+    content: "";
+    background: var(--border-color);
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.price_content .heading {
+    font-size: 18px;
+    line-height: 24px;
+    display: block;
+    margin-bottom: 3px;
+    font-weight: 600;
+    color: var(--accent);
+}
+.image_holder {
+    margin-bottom: 20px;
+}
+.price_content .value {
+    display: block;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    color: var(--secondary-color);
+}
+.price_txt {
+    display: flex;
+}
+#backup_val {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.price_txt .dollar {
+    line-height: 52px;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+.vps-price-plan p {
+    font-size: 14px;
+    padding-left: 30px;
+}
+.price_txt .numeric1 {
+    line-height: 52px;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+.vps_btn.generic-btn a {
+    padding: 10px 51px;
+    border-radius: 30px;
+    background: var(--accent);
+    height: 56px;
+}
+.price_txt .numeric2,
+.month-title small {
+    line-height: 62px;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+.product-con {
+    width: 100%;
+    float: left;
+    display: grid;
+    gap: 22px;
+    grid-template-columns: 23.3% 23.3% 23.3% 23.3%;
+    margin-top: -83px;
+}
+.vps-slider-price-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 29px 35px 27px 50px;
+    background: var(--primary-color);
+    border-radius: 25px;
+    max-width: 973px;
+    margin: 0 auto;
+    position: relative;
+    top: -65px;
+    box-shadow: 1px 0 59px rgb(90 179 237 / 16%);
+    border: 2px solid var(--accent);
+}
+.vps-save-percentage-box {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 700;
+    color: var(--accent);
+    padding-right: 45px;
+}
+.vps-save-con {
+    display: flex;
+    align-items: center;
+}
+.vps-save-coupon-box h4{
+    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+.vps-save-coupon-box {
+    padding-left: 29px;
+    border-left: 1px solid var(--border-color);
+    margin-bottom: -6px;
+}
+.vps-save-coupon-box span{
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 4px;
+}
+.vps-slider-price-box .primary-btn a{
+    height: 58px;
+    min-width: 188px;
+    gap: 20px;
+    padding: 10px 30px 10px 42px;
+}
